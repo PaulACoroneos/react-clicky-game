@@ -1,11 +1,11 @@
 import React from 'react';
 
 class Game extends React.Component {
-  render() {
-    return (
-
-    );
-  }
+    render() {
+        return (
+            <div>{'Hello Game'}</div>
+        );
+    }
 }
 
 export default Game;

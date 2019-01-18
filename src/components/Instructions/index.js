@@ -1,11 +1,11 @@
 import React from 'react';
 
 class Instructions extends React.Component {
-  render() {
-    return (
-      <div>{instructions}</div>
-    );
-  }
+    render() {
+        return (
+            <span>{this.props.text}</span>
+        );
+    }
 }
 
 export default Instructions;
