@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../Logo';
-import Instructions from '../Instructions';
-import Score from '../Score';
+import InfoItem from '../InfoItem';
 
 const Navbar = styled.div`
     display: flex;
@@ -13,7 +11,10 @@ const Navbar = styled.div`
     padding-bottom: 24px;
     border:2px solid black;
     border-radius:5px;
-    margin:25px;
+    margin-left:8px;
+    margin-right:8px;
+    margin-top:8px;
+    margin-bottom:25px;
   }
 `;
 
@@ -21,9 +22,9 @@ class Infobar extends React.Component {
     render() {
         return (
             <Navbar>
-                <Logo text="Clicky game"/>
-                <Instructions text="Click a card to begin" />
-                <Score best="NaN" current="NaN"/>
+                <InfoItem text="Clicky game"/>
+                <InfoItem text="Click a card to begin" />
+                <InfoItem text="score"/>
             </Navbar>
         );
     }

@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledScore = styled.span`
+const StyledScore = styled.li`
     margin-right:8px;
     font-size:24px;
+    list-style-type: none;
 `;
 
 class Score extends React.Component {

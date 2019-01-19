@@ -9,7 +9,8 @@ const StyledFooter = styled.footer`
     padding-bottom: 24px;
     border:2px solid black;
     border-radius:5px;
-    margin:25px;
+    margin-left:8px;
+    margin-right:8px;
 `;
 
 class Footer extends React.Component {

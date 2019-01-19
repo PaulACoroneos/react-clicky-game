@@ -1,9 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledInstruction = styled.li`
+    font-size:20px;
+    list-style-type: none;
+`;
+
 
 class Instructions extends React.Component {
     render() {
         return (
-            <span>{this.props.text}</span>
+            <StyledInstruction>{this.props.text}</StyledInstruction>
         );
     }
 }
