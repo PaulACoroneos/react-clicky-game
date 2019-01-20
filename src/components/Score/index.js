@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledScore = styled.li`
+const StyledScore = styled.div`
     margin-right:8px;
     font-size:24px;
     list-style-type: none;

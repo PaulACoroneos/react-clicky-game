@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledLogo = styled.li`
+const Styledlogo = styled.div`
     margin-left:8px;
+    margin-right:8px;
     font-size:32px;
-    list-style-type: none;
+    padding:8px;
 `;
 
 class Logo extends React.Component {
     render() {
         return (
-            <StyledLogo>{this.props.text}</StyledLogo>
+            <Styledlogo>{this.props.text}</Styledlogo>
         );
     }
 }

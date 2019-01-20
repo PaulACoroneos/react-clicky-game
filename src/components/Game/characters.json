@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Cloud",
+    "src": "cloud.png"
+  },
+  {
+    "id": 2,
+    "name": "Tifa",
+    "src": "tifa.png"
+  },
+  {
+    "id": 3,
+    "name": "Red XIII",
+    "src": "red.gif"
+  },
+  {
+    "id": 4,
+    "name": "Zach",
+    "src": "zach.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Aerith",
+    "src": "aerith.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Sepiroth",
+    "src": "sepiroth.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Yuffie",
+    "src": "yuffie.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Turks",
+    "src": "turks.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Barret",
+    "src": "barret.png"
+  },
+  {
+    "id": 10,
+    "name": "Vincent",
+    "src": "vincent.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Cait Sith",
+    "src": "caitsith.png"
+  },
+  {
+    "id": 12,
+    "name": "Cid",
+    "src": "cid.png"
+  }
+]
