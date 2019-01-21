@@ -53,7 +53,7 @@ const CardTitle = styled.span`
 
 function GameCard(props) {
     return (
-        <Card>
+        <Card onClick={this.p}>
             <CardTitle>{props.name}</CardTitle>
             <CardImg src={`/images/${props.src}`} alt={props.alt} />
         </Card>
