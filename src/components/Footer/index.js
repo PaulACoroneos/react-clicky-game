@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StyledFooter = styled.footer`
     display: flex;
@@ -14,12 +15,14 @@ const StyledFooter = styled.footer`
     color: #B8F3FF;
 `;
 
-class Footer extends React.Component {
-    render() {
-        return (
-            <StyledFooter>{this.props.text}</StyledFooter>
-        );
-    }
+function Footer({text}) {
+    return (
+        <StyledFooter>{text}</StyledFooter>
+    );
+}
+
+Footer.proptypes = {
+    text: PropTypes.string
 }
 
 export default Footer;

@@ -7,7 +7,7 @@ const StyledInstruction = styled.div`
     display:flex;
     flex-wrap: wrap;
     margin: 100px auto 25px auto;
-    padding: 8px;
+    padding: 25px;
     font-size:28px;
     flex-direction:column;
     color:#B8F3FF;
@@ -17,7 +17,7 @@ const StyledInstruction = styled.div`
 
 const titleStyle = {
     fontSize: '72px',
-    margin: '0 auto'
+    margin: '50px auto'
 }
 
 const instructStyle = {
