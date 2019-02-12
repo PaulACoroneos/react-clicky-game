@@ -47,7 +47,6 @@ class Game extends React.Component {
         super(props);
         
         this.state = {
-<<<<<<< HEAD
             correct: [] //array of cards that were guessed\
         };
     }
@@ -67,19 +66,13 @@ class Game extends React.Component {
         }
         else {
             this.setState({correct: []});
-        }
-=======
-            correct: [], //array of cards that were guessed\
-            currentScore: 0,
-            bestScore: 0
         };
     }
 
     onClick() {
         console.log('clicky');
         checkGuessed(this.card);
->>>>>>> parent of 04301b9... game is actually getting card info now. but need to get score working...
-    }
+}
 
     render() {
         const shuffledCards = shuffleCards(characters);

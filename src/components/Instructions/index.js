@@ -17,13 +17,8 @@ const StyledInstruction = styled.div`
 
 const titleStyle = {
     fontSize: '72px',
-<<<<<<< HEAD
     margin: '50px auto'
 };
-=======
-    margin: '0 auto'
-}
->>>>>>> parent of 04301b9... game is actually getting card info now. but need to get score working...
 
 const instructStyle = {
     width: '75vw',
@@ -36,7 +31,8 @@ class Instructions extends React.Component {
         return (
             <StyledInstruction>
                 <span style={titleStyle}>Final Fantasy VII Clicky Game</span>
-                <span style={instructStyle}>{this.props.text}</span></StyledInstruction>
+                <span style={instructStyle}>{this.props.text}</span>
+            </StyledInstruction>
         );
     }
 }
