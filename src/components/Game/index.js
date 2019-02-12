@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import GameCard from '../GameCard'
-import characters from "./characters.json";
+import GameCard from '../GameCard';
+import characters from './characters.json';
 
 const GameContainer = styled.div`
     background-color:#8AC6D0;
@@ -47,32 +47,21 @@ class Game extends React.Component {
         super(props);
         
         this.state = {
-            correct: [] //array of cards that were guessed\
-        };
-    }
-
-    onClick = (event) => {
-        let selected = event.target.dataset.name; 
-        console.log(selected, 'selected');
-        
-        let current = this.state.currentScore;
-        let best = this.state.bestScore;
-        let alreadyPicked = this.state.correct;
-        //console.log(`current core ${current},best score ${best},array of cards ${alreadyPicked}`);
-        if(!alreadyPicked.includes(selected)) {
-            let bestScore = best>current ? best : best+1;
-            //currentScore: current+1, bestScore: bestScore }
-            this.setState({correct: [...alreadyPicked,selected]});
-        }
-        else {
-            this.setState({correct: []});
+            correct: [], //array of cards that were guessed\
+            currentScore: 0,
+            bestScore: 0
         };
     }
 
     onClick() {
         console.log('clicky');
         checkGuessed(this.card);
-}
+    }
+
+    onClick() {
+        console.log('clicky');
+        checkGuessed(this.card);
+    }
 
     render() {
         const shuffledCards = shuffleCards(characters);

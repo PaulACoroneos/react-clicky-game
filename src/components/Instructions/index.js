@@ -17,7 +17,7 @@ const StyledInstruction = styled.div`
 
 const titleStyle = {
     fontSize: '72px',
-    margin: '50px auto'
+    margin: '0 auto'
 };
 
 const instructStyle = {
