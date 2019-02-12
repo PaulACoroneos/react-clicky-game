@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
+
 
 const Card = styled.div`
     position: relative;
@@ -51,13 +53,20 @@ const CardTitle = styled.span`
     color:#B8F3FF;
 `;
 
-function GameCard(props) {
+function GameCard({name,alt,src,onClick}) {
     return (
-        <Card onClick={this.p}>
-            <CardTitle>{props.name}</CardTitle>
-            <CardImg src={`/images/${props.src}`} alt={props.alt} />
+        <Card onClick={onClick} data-name={name}>
+            <CardTitle>{name}</CardTitle>
+            <CardImg src={`/images/${src}`} alt={alt} />
         </Card>
     );
+}
+
+GameCard.proptypes = {
+    name: PropTypes.string,
+    src: PropTypes.string,
+    alt: PropTypes.string,
+    onClick: PropTypes.function
 }
 
 export default GameCard;

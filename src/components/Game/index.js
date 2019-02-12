@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import GameCard from '../GameCard';
-import characters from './characters.json';
+import GameCard from '../GameCard'
+import characters from "./characters.json";
 
 const GameContainer = styled.div`
     background-color:#8AC6D0;
@@ -16,7 +16,6 @@ const GameContainer = styled.div`
 
 //This function takes in the array of cards and returned a shuffled array to display
 function shuffleCards(characters) {
-    //TODO: Get rid of this ugly for loop
     for(let i = Object.keys(characters).length-1;i > 0; i--) {
         const j = Math.floor(Math.random()* (i+1));
         const temp = characters[i];
@@ -27,40 +26,33 @@ function shuffleCards(characters) {
     return characters;
 }
 
-//This function handles the guessed card
-function checkGuessed (guessed) {
-    console.log(`Guessed card ID: ${guessed.id}`);
-    // if(this.state.correct.includes(guessed)) {
-
-    // }
-}
-
-function resetGame() {
-    this.props.correct = [];
-    this.props.currentScore = 0;
-}
-
-
-
 class Game extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             correct: [], //array of cards that were guessed\
-            currentScore: 0,
-            bestScore: 0
+            currentScore: 1,
+            bestScore: 3
         };
     }
 
-    onClick() {
-        console.log('clicky');
-        checkGuessed(this.card);
-    }
-
-    onClick() {
-        console.log('clicky');
-        checkGuessed(this.card);
+    onClick = (event) =>{
+        let selected = event.target.dataset.name; //TODO: refactor this. it's really sloppy
+        console.log(selected);
+        this.setState((state) => {
+            let current = state.currentScore;
+            let best = state.bestScore;
+            let alreadyPicked = state.correct;
+            console.log(current,best,alreadyPicked);
+            
+            if(!alreadyPicked.includes(selected)) {
+                return {currentScore: current++, bestScore: best>current ? current : best, correct: alreadyPicked.push(selected) };
+            }
+            else {
+                return {currentScore: 0, bestScore: 0, correct: []};
+            }
+        });
     }
 
     render() {

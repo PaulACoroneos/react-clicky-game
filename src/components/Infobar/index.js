@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../Logo';
+import Instructions from '../Instructions';
 import Score from '../Score';
 
 const Navbar = styled.div`
@@ -32,11 +33,10 @@ const Navbar = styled.div`
 
 class Infobar extends React.Component {
     render() {
-        const {best,current} = this.props;
         return (
             <Navbar>
                 <Logo text="Final Fantasy VII Clicky Game"/>
-                <Score best={best} current={current}/>
+                <Score best="0" current="0"/>
             </Navbar>
         );
     }
