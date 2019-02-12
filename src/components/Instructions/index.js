@@ -18,20 +18,20 @@ const StyledInstruction = styled.div`
 const titleStyle = {
     fontSize: '72px',
     margin: '50px auto'
-}
+};
 
 const instructStyle = {
     width: '75vw',
     margin: '0 auto',
     padding:'15px 0px 25px 0px'
-}
+};
 
 class Instructions extends React.Component {
     render() {
         return (
             <StyledInstruction>
                 <span style={titleStyle}>Final Fantasy VII Clicky Game</span>
-            <span style={instructStyle}>{this.props.text}</span></StyledInstruction>
+                <span style={instructStyle}>{this.props.text}</span></StyledInstruction>
         );
     }
 }

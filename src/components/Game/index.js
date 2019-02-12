@@ -16,6 +16,7 @@ const GameContainer = styled.div`
 
 //This function takes in the array of cards and returned a shuffled array to display
 function shuffleCards(characters) {
+    //TODO: Get rid of this ugly for loop
     for(let i = Object.keys(characters).length-1;i > 0; i--) {
         const j = Math.floor(Math.random()* (i+1));
         const temp = characters[i];
@@ -29,30 +30,28 @@ function shuffleCards(characters) {
 class Game extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
-            correct: [], //array of cards that were guessed\
-            currentScore: 1,
-            bestScore: 3
+            correct: [] //array of cards that were guessed\
         };
     }
 
-    onClick = (event) =>{
-        let selected = event.target.dataset.name; //TODO: refactor this. it's really sloppy
-        console.log(selected);
-        this.setState((state) => {
-            let current = state.currentScore;
-            let best = state.bestScore;
-            let alreadyPicked = state.correct;
-            console.log(current,best,alreadyPicked);
-            
-            if(!alreadyPicked.includes(selected)) {
-                return {currentScore: current++, bestScore: best>current ? current : best, correct: alreadyPicked.push(selected) };
-            }
-            else {
-                return {currentScore: 0, bestScore: 0, correct: []};
-            }
-        });
+    onClick = (event) => {
+        let selected = event.target.dataset.name; 
+        console.log(selected, 'selected');
+        
+        let current = this.state.currentScore;
+        let best = this.state.bestScore;
+        let alreadyPicked = this.state.correct;
+        //console.log(`current core ${current},best score ${best},array of cards ${alreadyPicked}`);
+        if(!alreadyPicked.includes(selected)) {
+            let bestScore = best>current ? best : best+1;
+            //currentScore: current+1, bestScore: bestScore }
+            this.setState({correct: [...alreadyPicked,selected]});
+        }
+        else {
+            this.setState({correct: []});
+        }
     }
 
     render() {

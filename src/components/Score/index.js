@@ -17,6 +17,6 @@ function Score ({best, current}) {
 Score.proptypes = {
     best: PropTypes.string,
     current: PropTypes.string
-}
+};
 
 export default Score;
