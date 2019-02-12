@@ -7,7 +7,7 @@ const StyledInstruction = styled.div`
     display:flex;
     flex-wrap: wrap;
     margin: 100px auto 25px auto;
-    padding: 25px;
+    padding: 8px;
     font-size:28px;
     flex-direction:column;
     color:#B8F3FF;
@@ -17,8 +17,13 @@ const StyledInstruction = styled.div`
 
 const titleStyle = {
     fontSize: '72px',
+<<<<<<< HEAD
     margin: '50px auto'
 };
+=======
+    margin: '0 auto'
+}
+>>>>>>> parent of 04301b9... game is actually getting card info now. but need to get score working...
 
 const instructStyle = {
     width: '75vw',
